@@ -1,0 +1,109 @@
+.root { -fx-font-family: "Segoe UI"; -fx-font-size: 14px; }
+.dashboard { -fx-background-color: linear-gradient(to bottom right, #0b1830, #152d49); }
+.hero { -fx-background-color: linear-gradient(to right, #163b60, #225f7b); -fx-background-radius: 22; -fx-padding: 26; }
+.title { -fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: #ffffff; }
+.eyebrow { -fx-text-fill: #81dedf; -fx-font-size: 11px; -fx-font-weight: bold; }
+.subtitle { -fx-text-fill: #d3e9f5; -fx-font-size: 15px; }
+.badge { -fx-text-fill: #e2f7ff; -fx-background-color: #ffffff18; -fx-background-radius: 16; -fx-padding: 6 12; -fx-font-size: 12px; }
+.sun-halo { -fx-fill: #ffcc4520; }
+.sun { -fx-fill: #ffd066; -fx-effect: dropshadow(gaussian, #ffc44955, 25, 0.3, 0, 0); }
+.sun-symbol { -fx-text-fill: #9b5d13; -fx-font-size: 44px; }
+.filter-panel { -fx-background-color: #ffffff; -fx-background-radius: 16; -fx-padding: 20; }
+.field-label { -fx-text-fill: #446078; -fx-font-size: 11px; -fx-font-weight: bold; }
+.text-field, .combo-box { -fx-background-color: #eff5fa; -fx-background-radius: 9; -fx-border-color: #d5e2ec; -fx-border-radius: 9; -fx-pref-height: 43; -fx-text-fill: #142e46; }
+.text-field:focused, .combo-box:focused { -fx-border-color: #008b92; }
+.primary { -fx-background-color: linear-gradient(to right, #087d8a, #0b9ca0); -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10; -fx-padding: 13 22; -fx-cursor: hand; -fx-pref-height: 43; }
+.primary:hover { -fx-background-color: #0cb0b2; -fx-effect: dropshadow(gaussian, #087d8a40, 12, 0.2, 0, 3); }
+.primary:pressed { -fx-background-color: #076e76; }
+.metric-card { -fx-background-radius: 16; -fx-padding: 12 16; -fx-min-height: 90; }
+.temperature-card { -fx-background-color: #fff1d9; }
+.rain-card { -fx-background-color: #dfedff; }
+.heat-card { -fx-background-color: #e0f6ed; }
+.metric-label { -fx-text-fill: #446078; -fx-font-size: 10px; -fx-font-weight: bold; }
+.metric-value { -fx-text-fill: #16314d; -fx-font-size: 25px; -fx-font-weight: bold; }
+.metric-note { -fx-text-fill: #4b6378; -fx-font-size: 11px; }
+.results-panel { -fx-background-color: #ffffff; -fx-background-radius: 16; -fx-padding: 20; }
+.section-title { -fx-text-fill: #173750; -fx-font-size: 20px; -fx-font-weight: bold; }
+.result-note { -fx-text-fill: #61778a; -fx-font-size: 12px; }
+.text-area { -fx-font-family: "Consolas"; -fx-font-size: 14px; -fx-text-fill: #28465e; -fx-background-color: #f3f7fa; -fx-background-radius: 10; }
+.text-area .content { -fx-background-color: #f3f7fa; -fx-background-radius: 10; -fx-padding: 14; }
+.status { -fx-text-fill: #b5d6e6; -fx-font-size: 12px; }
+
+.weather-scene-panel { -fx-background-color: #173a57; -fx-background-radius: 16; -fx-padding: 16 20; }
+.scene-sky { -fx-background-color: linear-gradient(to bottom, #275979, #407f9b); -fx-background-radius: 14; }
+.animated-sun { -fx-font-size: 80px; -fx-text-fill: #ffdc72; -fx-effect: dropshadow(gaussian, #ffb94366, 18, 0.25, 0, 0); }
+.scene-cloud { -fx-font-size: 75px; -fx-text-fill: #e3eff6; }
+.raindrop { -fx-stroke: #7ddfff; -fx-stroke-width: 3; -fx-stroke-line-cap: round; }
+.scene-description { -fx-text-fill: #ffffff; -fx-font-size: 16px; -fx-font-weight: bold; }
+.scene-footnote { -fx-text-fill: #bbd7e6; -fx-font-size: 11px; }
+
+.snowflake { -fx-text-fill: #ffffff; -fx-font-size: 19px; -fx-effect: dropshadow(gaussian, #bcecff80, 6, 0.2, 0, 0); }
+
+.check-box { -fx-text-fill: #446078; -fx-font-size: 12px; }
+.date-picker { -fx-background-radius: 9; }
+
+.dashboard-scroll, .dashboard-scroll > .viewport { -fx-background-color: #0b1830; }
+.chart { -fx-padding: 4; }
+.chart-plot-background { -fx-background-color: #f4f8fb; }
+.chart-vertical-grid-lines { -fx-stroke: transparent; }
+.chart-horizontal-grid-lines { -fx-stroke: #dce7ef; }
+.default-color0.chart-series-line { -fx-stroke: #ed9b2f; -fx-stroke-width: 3; }
+.default-color0.chart-line-symbol { -fx-background-color: #ed9b2f, white; -fx-background-radius: 6; -fx-padding: 4; }
+.axis { -fx-tick-label-fill: #4c6479; -fx-font-size: 11px; }
+
+.forecast-panel { -fx-background-color: linear-gradient(to bottom right, #235eaa, #3984cb); -fx-background-radius: 18; -fx-padding: 20 24; }
+.forecast-panel .section-title { -fx-text-fill: #e5f2ff; -fx-font-size: 17px; }
+.forecast-panel .result-note { -fx-text-fill: #bbd9fa; }
+.forecast-header { -fx-padding: 12 0 8 0; }
+.forecast-header .label { -fx-text-fill: #b7d6f5; -fx-font-size: 10px; -fx-font-weight: bold; }
+.forecast-row { -fx-padding: 9 0; -fx-border-color: #ffffff22 transparent transparent transparent; -fx-border-width: 1 0 0 0; }
+.forecast-day { -fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold; }
+.forecast-date { -fx-text-fill: #c4ddf7; -fx-font-size: 11px; }
+.forecast-icon { -fx-text-fill: white; -fx-font-size: 27px; }
+.forecast-icon.sun-icon { -fx-text-fill: #ffdc61; }
+.forecast-icon.rain-icon { -fx-text-fill: #dcf2ff; }
+.forecast-icon.snow-icon { -fx-text-fill: #d2f5ff; }
+.forecast-rain { -fx-text-fill: #b8e7ff; -fx-font-size: 11px; }
+.forecast-temperature { -fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold; }
+.temperature-range { -fx-pref-height: 7; -fx-max-height: 7; }
+.temperature-range > .track { -fx-background-color: #ffffff25; -fx-background-radius: 6; -fx-background-insets: 0; }
+.temperature-range > .bar { -fx-background-color: linear-gradient(to right, #75d8ef, #ffdb63, #ffa253); -fx-background-radius: 6; -fx-background-insets: 0; -fx-padding: 3; }
+
+/* Compact heading and summary; spacious, readable daily details. */
+.hero { -fx-padding: 12 18; -fx-background-radius: 16; }
+.title { -fx-font-size: 26px; }
+.sun-symbol { -fx-font-size: 29px; }
+.metric-card { -fx-padding: 10 14; -fx-min-height: 82; -fx-max-height: 90; -fx-background-radius: 12; }
+.metric-value { -fx-font-size: 25px; }
+.metric-note { -fx-font-size: 11px; }
+.daily-reading { -fx-font-size: 19px; -fx-text-fill: #17364e; -fx-font-family: "Consolas"; }
+.daily-reading .content { -fx-padding: 18 22; -fx-background-color: #edf5fa; }
+
+/* Compact seven/nine-day list. */
+.forecast-panel { -fx-padding: 12 18; }
+.forecast-header { -fx-padding: 5 0 3 0; }
+.forecast-row { -fx-padding: 3 0; }
+.forecast-day { -fx-font-size: 15px; }
+.forecast-date { -fx-font-size: 10px; }
+.forecast-icon { -fx-font-size: 20px; }
+.forecast-rain { -fx-font-size: 10px; }
+.forecast-temperature { -fx-font-size: 18px; }
+.forecast-panel .combo-box { -fx-pref-height: 32; }
+
+/* Fit the full dashboard in one desktop window. */
+.hero { -fx-padding: 8 14; }
+.title { -fx-font-size: 23px; }
+.weather-scene-panel { -fx-padding: 8 14; }
+.metric-card { -fx-min-height: 72; -fx-max-height: 76; -fx-padding: 7 12; }
+.metric-value { -fx-font-size: 22px; }
+.forecast-panel { -fx-padding: 10 14; }
+.forecast-row { -fx-padding: 1 0; }
+.forecast-icon { -fx-font-size: 16px; }
+.forecast-day { -fx-font-size: 13px; }
+.forecast-temperature { -fx-font-size: 16px; }
+.results-panel { -fx-padding: 12; }
+.daily-reading { -fx-font-size: 17px; }
+.daily-reading .content { -fx-padding: 12; }
+
+/* Readable labels on the blue panels. */
+.control-label { -fx-text-fill: white; -fx-font-weight: bold; }
