@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+
+<VBox xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" spacing="8"
+      prefWidth="1000" prefHeight="800" stylesheets="@weather.css" styleClass="dashboard">
+ <padding><Insets top="12" right="16" bottom="12" left="16"/></padding>
+ <children>
+  <HBox alignment="CENTER_LEFT" spacing="24" styleClass="hero">
+   <children>
+    <VBox spacing="8" HBox.hgrow="ALWAYS">
+     <children>
+      <Label text="DAILY WEATHER • AT A GLANCE" styleClass="eyebrow"/>
+      <Label text="Weather Data Analyzer" styleClass="title"/>
+     </children>
+    </VBox>
+    <StackPane prefWidth="66" minWidth="66" prefHeight="66" maxHeight="66">
+     <children>
+      <Circle radius="31" styleClass="sun-halo"/>
+      <Circle radius="23" styleClass="sun"/>
+      <Label text="☀" styleClass="sun-symbol"/>
+     </children>
+    </StackPane>
+   </children>
+  </HBox>
+  <HBox spacing="20" alignment="CENTER_LEFT" styleClass="weather-scene-panel">
+   <children>
+    <StackPane fx:id="scenePane" prefWidth="230" minWidth="230" prefHeight="95" minHeight="95" maxHeight="95" styleClass="scene-sky">
+     <children>
+      <VBox fx:id="sunScene" alignment="CENTER"><children><Label fx:id="sceneSun" text="☀" styleClass="animated-sun"/></children></VBox>
+      <VBox fx:id="cloudScene" alignment="CENTER"><children><Label text="☁" styleClass="scene-cloud"/></children></VBox>
+<StackPane fx:id="snowScene"><children>
+<Label text="☁" translateY="-25" styleClass="scene-cloud"/>
+<Label fx:id="flake0" text="❄" translateX="-80" styleClass="snowflake"/>
+<Label fx:id="flake1" text="❄" translateX="-55" styleClass="snowflake"/>
+<Label fx:id="flake2" text="❄" translateX="-30" styleClass="snowflake"/>
+<Label fx:id="flake3" text="❄" translateX="-5" styleClass="snowflake"/>
+<Label fx:id="flake4" text="❄" translateX="20" styleClass="snowflake"/>
+<Label fx:id="flake5" text="❄" translateX="45" styleClass="snowflake"/>
+<Label fx:id="flake6" text="❄" translateX="70" styleClass="snowflake"/>
+<Label fx:id="flake7" text="❄" translateX="90" styleClass="snowflake"/>
+</children></StackPane>
+      <StackPane fx:id="rainScene">
+       <children>
+        <Label text="☁" translateY="-25" styleClass="scene-cloud"/>
+        <Line fx:id="drop0" startX="0" startY="0" endX="-5" endY="13" translateX="-75" styleClass="raindrop"/>
+        <Line fx:id="drop1" startX="0" startY="0" endX="-5" endY="13" translateX="-50" styleClass="raindrop"/>
+        <Line fx:id="drop2" startX="0" startY="0" endX="-5" endY="13" translateX="-25" styleClass="raindrop"/>
+        <Line fx:id="drop3" startX="0" startY="0" endX="-5" endY="13" translateX="0" styleClass="raindrop"/>
+        <Line fx:id="drop4" startX="0" startY="0" endX="-5" endY="13" translateX="25" styleClass="raindrop"/>
+        <Line fx:id="drop5" startX="0" startY="0" endX="-5" endY="13" translateX="50" styleClass="raindrop"/>
+        <Line fx:id="drop6" startX="0" startY="0" endX="-5" endY="13" translateX="75" styleClass="raindrop"/>
+        <Line fx:id="drop7" startX="0" startY="0" endX="-5" endY="13" translateX="90" styleClass="raindrop"/>
+       </children>
+      </StackPane>
+     </children>
+    </StackPane>
+    <VBox spacing="4" HBox.hgrow="ALWAYS">
+     <children>
+      <DatePicker fx:id="sceneDatePicker" maxWidth="210" promptText="Choose a date"/>
+      <Label fx:id="sceneDescription" text="Select a day to see its weather" styleClass="scene-description" wrapText="true"/>
+      
+     </children>
+    </VBox>
+    <VBox spacing="4">
+     <children>
+      <Label text="Temperature unit" styleClass="control-label"/>
+      <ComboBox fx:id="unitPicker" prefWidth="110" accessibleText="Temperature unit: Celsius or Fahrenheit"/>
+     </children>
+    </VBox>
+   </children>
+  </HBox>
+  <HBox spacing="16">
+   <children>
+    <VBox spacing="5" maxHeight="90" styleClass="metric-card,temperature-card" HBox.hgrow="ALWAYS" prefWidth="280">
+     <children><Label text="WEEKLY AVERAGE" styleClass="metric-label"/><Label fx:id="averageValue" text="—" styleClass="metric-value"/><Label fx:id="categoryValue" visible="false" managed="false"/></children>
+    </VBox>
+    <VBox spacing="5" maxHeight="90" styleClass="metric-card,rain-card" HBox.hgrow="ALWAYS" prefWidth="280">
+     <children><Label text="RAINY DAYS" styleClass="metric-label"/><Label fx:id="rainyValue" text="—" styleClass="metric-value"/><Label text="Rainfall greater than 0 mm · displayed 7 days" styleClass="metric-note" wrapText="true"/></children>
+    </VBox>
+    <VBox spacing="5" maxHeight="90" styleClass="metric-card,heat-card" HBox.hgrow="ALWAYS" prefWidth="280">
+     <children><Label text="ABOVE THRESHOLD" styleClass="metric-label"/><Label fx:id="aboveValue" text="—" styleClass="metric-value"/><Label fx:id="aboveCaption" text="Days above threshold" styleClass="metric-note" wrapText="true"/></children>
+    </VBox>
+   </children>
+  </HBox>
+  <HBox spacing="14" VBox.vgrow="ALWAYS">
+   <children>
+  <VBox spacing="5" styleClass="forecast-panel" HBox.hgrow="ALWAYS" prefWidth="620">
+   <children>
+    <HBox spacing="16" alignment="CENTER_LEFT"><children>
+     <Label text="DAILY WEATHER" styleClass="section-title" HBox.hgrow="ALWAYS"/>
+     <Label text="7 days" styleClass="result-note"/>
+     <Label text="Enter threshold" styleClass="control-label"/>
+     <TextField fx:id="thresholdField" prefWidth="80" maxWidth="80" promptText="e.g. -5"/>
+    </children></HBox>
+    <Label fx:id="chartCaption" text="Sample temperatures from your selected date" styleClass="result-note"/>
+    <HBox styleClass="forecast-header" spacing="12"><children>
+     <Label text="DATE" prefWidth="100"/><Label text="RAIN" prefWidth="60"/><Label fx:id="temperatureHeader" text="TEMPERATURE (°C)" HBox.hgrow="ALWAYS"/>
+    </children></HBox>
+    <VBox fx:id="forecastRows" spacing="0"/>
+   </children>
+  </VBox>
+  <VBox spacing="10" styleClass="results-panel" prefWidth="290" minWidth="270">
+   <children>
+    <Label text="Daily weather reading" styleClass="section-title"/>
+    <TextArea fx:id="outputArea" editable="false" wrapText="true" VBox.vgrow="ALWAYS" prefHeight="300" minHeight="210" maxWidth="Infinity" styleClass="daily-reading"/>
+   </children>
+  </VBox>
+   </children>
+  </HBox>
+  <Label fx:id="statusLabel" visible="false" managed="false" text="" styleClass="status" wrapText="true"/>
+ </children>
+</VBox>
