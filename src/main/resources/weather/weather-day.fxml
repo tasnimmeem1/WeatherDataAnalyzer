@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<HBox xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER_LEFT" spacing="12" styleClass="forecast-row">
+ <children>
+  <VBox spacing="1" prefWidth="100" minWidth="100"><children>
+   <Label fx:id="dayLabel" text="Mon" styleClass="forecast-day"/>
+   <Label fx:id="dateLabel" text="Aug 1" styleClass="forecast-date"/>
+  </children></VBox>
+  <VBox spacing="0" alignment="CENTER" prefWidth="60" minWidth="60"><children>
+   <Label fx:id="weatherIcon" text="☀" styleClass="forecast-icon"/>
+   <Label fx:id="rainLabel" text="0.0 mm" styleClass="forecast-rain"/>
+  </children></VBox>
+  <ProgressBar fx:id="temperatureBar" progress="0.5" maxWidth="Infinity" HBox.hgrow="ALWAYS" styleClass="temperature-range"/>
+  <Label fx:id="temperatureLabel" text="20°" prefWidth="60" minWidth="60" alignment="CENTER_RIGHT" styleClass="forecast-temperature"/>
+ </children>
+</HBox>
